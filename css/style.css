@@ -1,0 +1,69 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(243, 101, 224, 0.774);
+    padding: 0;
+    margin: 0; /*borde de pagina en pantalla sin borde*/
+}
+
+#encabezado{
+    background-color: rgb(172, 93, 247);
+    color: azure;
+    text-align: center;
+    padding: 10px; /*distancia del texto y borde*/
+}
+
+/**/
+#menu-principal ul{/*ul referencio que los elementos de la lista*/
+    list-style: none; /*none desactiva puntos/elementos de la lista/*/
+    display: flex; /*elemtenos de lista en horizonal (inicioalbumcontacto)*/
+    gap: 20px; /*espacios de elementos lista horizontal*/
+    justify-content: center;
+}
+
+/*elemetos lista seleccion*/
+           /*ul li a, vamos avanzando indicando q elementos queremos afectar*/ 
+#menu-principal ul li a{/*estilo de elementos texto de la lista(botones)*/
+    text-decoration: none;
+    color: azure;
+    background-color: rgb(247, 64, 231);
+    padding: 6px;
+    border-radius: 7px;
+}
+
+#contenido{
+    max-width: 600px;
+    margin: 20px auto;
+
+}
+
+.seccion{
+    background-color: rgb(203, 150, 228);
+    padding: 15px;
+}
+
+.espacio-imagen{
+    width: 100px;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.tarjeta{
+    height: 300px;
+    width: 300px;
+    border: 4px solid rgb(96, 57, 160);
+    border-radius: 4px;
+    padding: 10px;
+
+}
+
+.galeria{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#pie{
+    background-color: rgb(222, 111, 250);
+    color: rgb(184, 49, 218);
+}
