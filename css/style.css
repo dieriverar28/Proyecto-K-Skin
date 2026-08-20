@@ -1,69 +1,299 @@
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgba(243, 101, 224, 0.774);
+/* REGLA DEL CUERPO (BODY) */
+/* Define la tipografía general, el color de texto café oscuro y la imagen de fondo con transparencia */
+body {
+    font-family: 'Century Gothic', 'Quicksand', sans-serif;
+    color: #2b1a1d; 
     padding: 0;
-    margin: 0; /*borde de pagina en pantalla sin borde*/
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    background-color: #f4f6f8; 
 }
 
-#encabezado{
-    background-color: rgb(172, 93, 247);
-    color: azure;
+/* PSEUDO-ELEMENTO DE FONDO (body::before) */
+/* Carga la foto de Sakura fija en pantalla para que no se mueva al bajar y le da transparencia */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/sakura.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.25; 
+    z-index: -1;
+}
+
+/* ESTRUCTURA Y NAVEGACIÓN*/
+/* REGLA 1: ENCABEZADO (#encabezado) */
+/* Crea un fondo con degradado rosa a fucsia, centra la cabecera y proyecta una sombra suave */
+#encabezado {
+    background: linear-gradient(135deg, #e60073, #ff80bf);
+    color: #ffffff;
     text-align: center;
-    padding: 10px; /*distancia del texto y borde*/
+    padding: 25px 15px;
+    box-shadow: 0 4px 12px rgba(230, 0, 115, 0.2);
 }
 
-/**/
-#menu-principal ul{/*ul referencio que los elementos de la lista*/
-    list-style: none; /*none desactiva puntos/elementos de la lista/*/
-    display: flex; /*elemtenos de lista en horizonal (inicioalbumcontacto)*/
-    gap: 20px; /*espacios de elementos lista horizontal*/
-    justify-content: center;
-}
-
-/*elemetos lista seleccion*/
-           /*ul li a, vamos avanzando indicando q elementos queremos afectar*/ 
-#menu-principal ul li a{/*estilo de elementos texto de la lista(botones)*/
-    text-decoration: none;
-    color: azure;
-    background-color: rgb(247, 64, 231);
-    padding: 6px;
-    border-radius: 7px;
-}
-
-#contenido{
-    max-width: 600px;
-    margin: 20px auto;
-
-}
-
-.seccion{
-    background-color: rgb(203, 150, 228);
-    padding: 15px;
-}
-
-.espacio-imagen{
-    width: 100px;
-    height: 150px;
-    border-radius: 4px;
-}
-
-.tarjeta{
-    height: 300px;
-    width: 350px;
-    border: 4px solid rgb(96, 57, 160);
-    border-radius: 4px;
-    padding: 10px;
-
-}
-
-.galeria{
+/* REGLA 2: LISTA DE NAVEGACIÓN (#menu-principal ul) */
+/* Alinea los botones del menú de forma horizontal, quita los puntos de lista y los centra */
+#menu-principal ul {
+    list-style: none;
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
+    padding: 0;
 }
 
-#pie{
-    background-color: rgb(222, 111, 250);
-    color: rgb(184, 49, 218);
+/* REGLA 3: ENLACES DEL MENÚ (#menu-principal ul li a) */
+/* Diseña los botones del menú como cápsulas traslúcidas blancas con texto claro */
+#menu-principal ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* REGLA 4: CONTENEDOR PRINCIPAL (#contenido) */
+/* Ajusta el ancho de la página en la pantalla para dejar ver la foto de fondo por las orillas */
+#contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* REGLA 5: CONTENEDORES DE SECCIÓN (.seccion) */
+/* Crea bloques blancos con esquinas redondeadas y bordes rosa pastel para organizar el texto */
+.seccion {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ffd6e7;
+    box-shadow: 0 4px 15px rgba(255, 128, 191, 0.12);
+}
+
+/* ==========================================================
+   GALERÍA Y TARJETAS RECTANGULARES
+   ========================================================== */
+
+/* REGLA 6: TARJETA DE PRODUCTO (.tarjeta) */
+/* Define recuadros rectangulares cuya altura se expande automáticamente según caiga la descripción */
+.tarjeta {
+    background-color: #ffffff;
+    border: 2px solid #ffb3d9;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 3px 10px rgba(255, 179, 217, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto; 
+}
+
+/* REGLA 7: CUADRÍCULA DE GALERÍA (.galeria) */
+/* Organiza las tarjetas en una cuadrícula rectangular delgada de 160px para optimizar el espacio */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* REGLA 8: PIE DE PÁGINA (#pie) */
+/* Estiliza el pie de página con un tono rosa oscuro elegante y texto centrado claro */
+#pie {
+    background-color: #8e0038;
+    color: #fce4ec;
+    font-size: 14px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* REGLA 9: EFECTO INTERACTIVO DE TARJETA (.tarjeta:hover) */
+/* Levanta levemente la tarjeta y acentúa la sombra rosa cuando pasas el cursor por encima */
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(194, 24, 91, 0.18);
+    border-color: #f48fb1;
+}
+
+/* ==========================================================
+   BOTONES, FORMULARIOS Y DETALLES
+   ========================================================== */
+
+/* REGLA 10: BOTÓN PRINCIPAL (button) */
+/* Otorga diseño rosa chicle, esquinas suaves y sombra a los botones de acción como Enviar */
+button {
+    background-color: #ff85a1;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(173, 20, 87, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* REGLA 11: INTERACCIÓN EN BOTONES (button:hover) */
+/* Cambia el color del botón a frambuesa y lo eleva ligeramente al poner el mouse encima */
+button:hover {
+    background-color: #ff5277;
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255, 82, 119, 0.4);
+}
+
+/* REGLA 12: BOTÓN DE LIMPIAR (button[type="reset"]) */
+/* Aplica estilo secundario con fondo blanco y borde rosa para diferenciarlo del botón Enviar */
+button[type="reset"] {
+    background-color: #ffffff;
+    color: #ff85a1;
+    border: 2px solid #ff85a1;
+}
+
+/* REGLA 13: INTERACCIÓN EN ENLACES DE MENÚ (#menu-principal ul li a:hover) */
+/* Ilumina el fondo de la cápsula de menú al pasar el cursor */
+#menu-principal ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #8e0038;
+}
+
+/* REGLA 14: IMÁGENES DE TARJETA (.espacio-imagen, .tarjeta img) */
+/* Hace que la foto del producto se ajuste entera dentro de un marco de 120px sin recortarse */
+.espacio-imagen, .tarjeta img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain; 
+    background-color: #fff0f6;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* REGLA 15: CAMPOS DE ENTRADA (input) */
+/* Da estilo rosa pastel a los cuadros de texto del formulario */
+input {
+    padding: 10px 14px;
+    border: 1.5px solid #f8bbd0;
+    border-radius: 10px;
+    outline: none;
+    background-color: #fffafc;
+    transition: border-color 0.3s;
+}
+
+/* REGLA 16: CAMPO DE ENTRADA ACTIVO (input:focus) */
+/* Ilumina con un borde rosa encendido el campo de texto donde estás escribiendo */
+input:focus {
+    border-color: #ad1457;
+    box-shadow: 0 0 0 4px rgba(248, 187, 208, 0.4);
+}
+
+/* REGLA 17: TÍTULOS DE SECCIÓN (.seccion h2) */
+/* Coloca una línea rosa decorativa bajo los títulos principales */
+.seccion h2 {
+    font-size: 22px;
+    color: #8e0038;
+    margin-bottom: 12px;
+    border-bottom: 3px solid #f48fb1;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+/* REGLA 18: ÁREA DE TEXTO EXTENSA (textarea) */
+/* Estiliza la caja de comentarios del formulario impidiendo que desordene la página */
+textarea {
+    resize: none;
+    width: 100%;
+    border-radius: 8px;
+    border: 1.5px solid #f8bbd0;
+    padding: 10px;
+}
+
+/* REGLA 19: ESPACIADO DE PÁRRAFOS (.seccion p) */
+/* Aumenta el espacio entre líneas para que los párrafos se lean cómodamente */
+.seccion p {
+    line-height: 1.5;
+}
+
+/* REGLA 20: UNIFORMIDAD DE TEXTO (::first-letter) */
+/* Cancela cualquier tamaño gigante en la primera letra para que la descripción se vea uniforme */
+.tarjeta p::first-letter,
+.tarjeta h3::first-letter,
+.seccion p::first-letter {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+/*10 ESTILOS DIFERENTES*/
+/* REGLA 21: PROPIEDAD 1 ( Espaciado de letras (letter-spacing))*/
+/* Separa ligeramente los caracteres del título para una apariencia limpia */
+#encabezado h1 {
+    letter-spacing: 1px;
+}
+
+/* REGLA 22: PROPIEDAD 2 (Transformación de texto (text-transform)) */
+/* Muestra las palabras del menú en mayúsculas automáticamente */
+#menu-principal ul li a {
+    text-transform: uppercase;
+}
+
+/* REGLA 23: PROPIEDAD 3 (Filtros visuales (filter)) */
+/* Aplica sombra paralela al contorno de los títulos principales */
+.seccion h2 {
+    filter: drop-shadow(0px 2px 3px rgba(142, 0, 56, 0.2));
+}
+
+/* REGLA 24: PROPIEDAD 4 (Control de desbordamiento (overflow)) */
+/* Asegura que las imágenes no sobresalgan de las esquinas redondeadas */
+.tarjeta {
+    overflow: hidden;
+}
+
+/* REGLA 25: PROPIEDAD 5 (Estilo de cursor (cursor)) */
+/* Muestra la mano interactiva al colocar el mouse sobre una tarjeta */
+.tarjeta:hover {
+    cursor: pointer;
+}
+
+/* REGLA 26: PROPIEDAD 6 (Selección de texto (user-select)) */
+/* Evita que el texto de los botones se seleccione al hacer clics rápidos */
+button {
+    user-select: none;
+}
+
+/* REGLA 27: PROPIEDAD 7 (Nivel de opacidad (opacity)) */
+/* Aplica una ligera transparencia estética al pie de página */
+#pie {
+    opacity: 0.95;
+}
+
+/* REGLA 28: PROPIEDAD 8 (Viñetas de lista (list-style-type)) */
+/* Cambia los puntos tradicionales por cuadrados en las listas internas */
+.seccion ul {
+    list-style-type: square;
+}
+
+/* REGLA 29: PROPIEDAD 9 (Color de acento (accent-color)) */
+/* Pinta las casillas de verificación (checkbox) del tono rosa del sitio */
+input[type="checkbox"], input[type="radio"] {
+    accent-color: #ff85a1;
+}
+
+/* REGLA 30: PROPIEDAD 10 ( Filtro de fondo (backdrop-filter)) */
+/* Genera un efecto borroso traslúcido en las pestañas del menú */
+#menu-principal ul li a {
+    backdrop-filter: blur(4px);
 }
