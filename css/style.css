@@ -80,9 +80,7 @@ body::before {
     box-shadow: 0 4px 15px rgba(255, 128, 191, 0.12);
 }
 
-/* ==========================================================
-   GALERÍA Y TARJETAS RECTANGULARES
-   ========================================================== */
+/* TARJETAS */
 
 /* REGLA 6: TARJETA DE PRODUCTO (.tarjeta) */
 /* Define recuadros rectangulares cuya altura se expande automáticamente según caiga la descripción */
@@ -129,9 +127,7 @@ body::before {
     border-color: #f48fb1;
 }
 
-/* ==========================================================
-   BOTONES, FORMULARIOS Y DETALLES
-   ========================================================== */
+/*  BOTONES, FORMULARIOS Y DETALLES */
 
 /* REGLA 10: BOTÓN PRINCIPAL (button) */
 /* Otorga diseño rosa chicle, esquinas suaves y sombra a los botones de acción como Enviar */
@@ -238,6 +234,7 @@ textarea {
 }
 
 /*10 ESTILOS DIFERENTES*/
+
 /* REGLA 21: PROPIEDAD 1 ( Espaciado de letras (letter-spacing))*/
 /* Separa ligeramente los caracteres del título para una apariencia limpia */
 #encabezado h1 {
