@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Álbum de Ejemplo</title>
+		<link rel="stylesheet" href="css/style.css"> 
+
+	</head>
+	<body>
+		<div class="topbar">
+			<div>
+				<div class="woostify-container">
+					<div class="topbar-item topbar-left"></div>
+					<div class="topbar-item topbar-center">Envio gratis
+						en compras sobre $20.000</div>
+					<div class="topbar-item topbar-right"></div> 
+				</div>
+			</div>
+		</div>
+		<header id="encabezado">
+			<h1>K-Skin OPCIONES DE PRODUCTOS</h1>
+			<p>Lo mejor de la estetica Coreana en tu piel</p>
+			<img src="img/ENCABEZADOPAG2.jpg" width="800" height="400">
+
+			<nav id="menu-principal"> <!--nav navegacion-->
+				<ul> <!--en esta seccion se puede referenciar/vincular una pagina https://-->
+					<li><a href="#inicio">MAQUILLAJE</a></li>
+					<li><a href="#album">SKINCARE</a></li>
+				</ul><!--ul lista desordenada, ol lista numerica-->
+			</nav>
+		</header>
+
+		<main id="contenido">
+			<section id="inicio" class="seccion">
+				<h2>Bienvenidos a K-Skin</h2>
+				<p>Esta es una página de ejemplo inspirada en un diseño de álbum/galería.</p>
+				<p>Puedes usar este espacio para presentar tu sitio, proyecto o portafolio.</p>
+			</section>
+
+			<section id="album" class="seccion">
+				<h2>Revisa Lo Nuevo!</h2>
+				<img src="img/coreana.jpg">
+				<h3>Revisa Nuestros Productos Estrella</h3>
+				
+
+				<div class="galeria">
+					<!-- Tarjeta 1 -->
+					<article class="tarjeta">
+						<div class="espacio-imagen">
+							<!-- Aquí iría una imagen -->
+							<img src="img/TOCOBO04.jpg" style="height: 100%; width: 200%; object-fit: cover;">
+						</div>
+						<h3>TOBOCO SKIN</h3>
+						<p>Proteccion Solar </p>
+						
+					</article>
+
+					<!-- Tarjeta 2 -->
+					<article class="tarjeta">
+						<div class="espacio-imagen">
+							<!-- Aquí iría una imagen -->
+							<img src="img/2-rosy-mucha.jpg" style="height: 100%; width: 200%; object-fit: cover;">
+						</div>
+						<h3>Glaze Bouncing Tint</h3>
+						<p>Tinte labial con efecto voluminizador refrescante.</p>
+					</article>
+
+					<!-- Tarjeta 3 -->
+					<article class="tarjeta">
+						<div class="espacio-imagen">
+							<!-- Aquí iría una imagen -->
+						<img src="img/15552_krskin_vc.jpg" style="height: 100%; width: 200%; object-fit: cover;">
+						</div>
+						<h3>Numbuzin Tonico</h3>
+						<p>Tónico para la piel con propiedades revitalizantes.</p>
+					</article>
+
+					<!-- Tarjeta 4 -->
+					<article class="tarjeta">
+						<div class="espacio-imagen">
+							<!-- Aquí iría una imagen -->
+						<img src="img/2aN_BASE.jpg" style="height: 100%; width: 200%; object-fit: cover;">
+						</div>
+						<h3>2aN Gleaming Tension N°21</h3>
+						<p>Base de maquillaje en formato cushion, con tecnología tension net que distribuye el maquillaje de forma uniforme, logrando una cobertura pareja y acabado luminoso.</p>
+					</article>
+
+					<!-- Tarjeta Protector Solar -->
+					<article class="tarjeta">
+						<div class="espacio-imagen">
+							<img src="img/protectorSolas.jpeg" alt="Protector Solar">
+						</div>
+						<h3>Protector Solar</h3>
+						<p>Protección SPF50+ de textura ligera que se absorbe rápidamente sin dejar residuo grasoso.</p>
+					</article>
+
+					<!-- Tarjeta 6 -->
+					<article class="tarjeta">
+						<div class="espacio-imagen">
+							<!-- Aquí iría una imagen -->
+							<img src="img/liptatto.jpg" style="height: 100%; width: 200%; object-fit: cover;">
+						</div>
+						<h3>Lip Tatto Berrisom</h3>
+						<p>el tinte labial peel-off original de Corea.</p>
+					</article>
+				</div>
+			</section>
+
+			<section id="contacto" class="seccion">
+				<h2>Contacto</h2>
+				<p>Si tienes dudas o comentarios, puedes escribirnos:</p>
+
+				<form action="#" method="post"> <!--se empieza asi para indicar donde se almacena el dato (POST-GET)-->
+					<label for="nombre">Nombre:</label><br>
+					<input type="text" id="nombre" name="nombre"><br><br>
+
+					<label for="email">Correo:</label><br>
+					<input type="email" id="email" name="email"><br><br>
+
+					<label for="mensaje">Mensaje:</label><br>
+					<textarea id="mensaje" name="mensaje" rows="4" cols="30"></textarea><br><br>
+
+					<button type="submit">Enviar</button>
+					<button type="reset">Limpiar</button>
+				</form>
+			</section>
+		</main>
+
+		<footer id="pie">
+			<p><small>&copy; 2025 Álbum de Ejemplo - Todos los derechos reservados</small></p>
+		</footer>
+	</body>
+</html>
