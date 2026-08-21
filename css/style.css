@@ -27,6 +27,51 @@ body::before {
     z-index: -1;
 }
 
+/* BARRA SUPERIOR ENVIO GRATIS(.topbar) */
+.topbar {
+    background-color: #971313;
+    padding: 0px 0
+}
+
+.topbar * {
+    color: #FFFFFF
+}
+
+.topbar .woostify-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.woostify-container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.topbar-slider {
+    background-color: #777777
+}
+
+.topbar-slider .slider-wrapper {
+    padding: 5px 0
+}
+
+.topbar-slider * {
+    color: #FFFFFF
+}
+
+.topbar-slider .flickity-prev-next-button svg {
+    fill: #222222
+}
+
+.topbar-slider .slick-slider svg {
+    fill: #222222
+}
+
 /* ESTRUCTURA Y NAVEGACIÓN*/
 /* REGLA 1: ENCABEZADO (#encabezado) */
 /* Crea un fondo con degradado rosa a fucsia, centra la cabecera y proyecta una sombra suave */
