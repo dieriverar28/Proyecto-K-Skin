@@ -37,7 +37,30 @@
 						<input type= "tel" id="fono">
 					<br><br>
 						<label>Fecha de nacimiento: </label>
-						<input type= "date" id="fecnac">	
+						<input type= "date" id="fecnac">
+					<br><br>
+						<label>Seleccione producto: </label>
+						<select id="productos">
+							<option value="">--SELECCIONE PRODUCTO--</option>
+							<option value="prod1">Helados</option>
+							<option value="prod2">Papitas</option>
+							<option value="prod3">Choclotes</option>
+							<option value="prod3">Bebidas</option>
+						</select>
+					<br><br>
+						<label>Cantidad: </label>
+						<input type="number" min="10" max="99">
+					<br><br>
+						<label>Forma de pago: </label>
+						<label >Debito: </label>
+						<input type="radio" name="fdepago" id="debito" value="1">
+						<label >Credito: </label>
+						<input type="radio" name="fdepago" id="credito" value="2">
+						<label >efectivo: </label>
+						<input type="radio" name="fdepago" id="efectivo" value="3">
+					<br><br>
+						<input type="submit">
+						<button>Comprar</button>	
 					</fieldset>	
 				</form>
 			</section>
