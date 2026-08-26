@@ -1,71 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto y Compras</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <section id="contacto" class="seccion">
-				<h2>Contacto</h2>
-				<p>Si tienes dudas o comentarios, puedes escribirnos:</p>
+        <h2>Contacto</h2>
+        <p>Si tienes dudas o comentarios, puedes escribirnos:</p>
 
-				<form name="contacto" id="contacto"> <!--se empieza asi para indicar donde se almacena el dato (POST-GET)-->
-					<fieldset>
-						<legend>Formulario de Contacto</legend>
-					<br>
-						<label>Nombre: </label>>
-						<input type= "text"
-						required
-						id="nombre"
-						placeholder="Ingrese su nombre">
-					<br><br>
-					
-						<label>Rut: </label>
-						<input type= "text"
-						required
-						id="rut"
-						placeholder="Formato: 12345678-9">
-					<br><br>
-					
-						<label>Correo: </label>
-						<input type= "email" id="email">
-		
-					<br><br>
-						<label>Telefono: </label>
-						<input type= "tel" id="fono">
-					<br><br>
-						<label>Fecha de nacimiento: </label>
-						<input type= "date" id="fecnac">
-					<br><br>
-						<label>Seleccione producto: </label>
-						<select id="productos">
-							<option value="">--SELECCIONE PRODUCTO--</option>
-							<option value="prod1">TOBOCO SKIN</option>
-							<option value="prod2">Glaze Bouncing Tint</option>
-							<option value="prod3">Numbuzin Tonico</option>
-							<option value="prod4">2aN Gleaming Tension N°21</option>
-                            <option value="prod5">Protector Solar</option>
-                            <option value="prod6">Lip Tatto Berrisom</option>
-						</select>
-					<br><br>
-						<label>Cantidad: </label>
-						<input type="number" min="1" max="99">
-					<br><br>
-						<label>Forma de pago: </label>
-						<label >Debito: </label>
-						<input type="radio" name="fdepago" id="debito" value="1">
-						<label >Credito: </label>
-						<input type="radio" name="fdepago" id="credito" value="2">
-						<label >efectivo: </label>
-						<input type="radio" name="fdepago" id="efectivo" value="3">
-					<br><br>
-						<input type="submit">
-						<button>Comprar</button>	
-					</fieldset>	
-				</form>
-                <script src="js/validar.js"></script>
-			</section>
+        <form name="contacto" id="contacto">
+            <fieldset>
+                <legend>Formulario de Contacto</legend>
+                <br>
+                
+                <label for="nombre">Nombre: </label>
+                <input type="text" 
+                       required 
+                       id="nombre" 
+                       placeholder="Ingrese su nombre">
+                <br><br>
+                
+                <label for="rut">Rut: </label>
+                <input type="text" 
+                       required 
+                       id="rut" 
+                       placeholder="Formato: 12345678-k">
+                <br><br>
+                
+                <label for="email">Correo: </label>
+                <input type="email" id="email" placeholder="ejemplo@gmail.com">
+                <br><br>
+                
+                <label for="fono">Teléfono: </label>
+                <input type="tel" id="fono" placeholder="+56912345678">
+                <br><br>
+                
+                <label for="fecnac">Fecha de nacimiento: </label>
+                <input type="date" id="fecnac">
+                <br><br>
+                
+                <label for="productos">Seleccione producto: </label>
+                <select id="productos">
+                    <option value="">--SELECCIONE PRODUCTO--</option>
+                    <option value="prod1">TOBOCO SKIN</option>
+                    <option value="prod2">Glaze Bouncing Tint</option>
+                    <option value="prod3">Numbuzin Tonico</option>
+                    <option value="prod4">2aN Gleaming Tension N°21</option>
+                    <option value="prod5">Protector Solar</option>
+                    <option value="prod6">Lip Tatto Berrisom</option>
+                </select>
+                <br><br>
+                
+                <!-- CORREGIDO: Se agregó id="cantidad" para poder manipularlo con JS -->
+                <label for="cantidad">Cantidad: </label>
+                <input type="number" id="cantidad" min="10" max="99">
+                <br><br>
+                
+                <!-- CORREGIDO: Se agregaron los atributos for para vincular cada label a su radio -->
+                <label>Forma de pago: </label>
+                
+                <input type="radio" name="fdepago" id="debito" value="1">
+                <label for="debito">Débito</label>
+                
+                <input type="radio" name="fdepago" id="credito" value="2">
+                <label for="credito">Crédito</label>
+                
+                <input type="radio" name="fdepago" id="efectivo" value="3">
+                <label for="efectivo">Efectivo</label>
+                <br><br>
+                
+                <input type="submit" value="Comprar">
+            </fieldset> 
+        </form>
+
+        <script src="js/validar.js"></script>
+    </section>
 </body>
 </html>
